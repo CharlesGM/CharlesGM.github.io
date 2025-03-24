@@ -2,8 +2,7 @@ name: Deploy to GitHub Pages
 
 on:
   push:
-    branches:
-      - main  # or master, depending on your default branch name
+    branches: [ main ]  # Run on either main or master
   workflow_dispatch:
 
 permissions:
@@ -20,6 +19,16 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Debug directory
+        run: |
+          pwd
+          echo "Repository root contents:"
+          tree
+          echo "Checking if files exist:"
+          test -f index.html && echo "index.html exists" || echo "index.html missing"
+          test -f CNAME && echo "CNAME exists" || echo "CNAME missing"
+          test -d projects && echo "projects directory exists" || echo "projects directory missing"
       
       - name: Setup Pages
         uses: actions/configure-pages@v4
