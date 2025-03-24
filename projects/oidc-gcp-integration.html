@@ -1,0 +1,274 @@
+---
+layout: default
+title: OIDC GCP Integration - Charles Mbugua
+---
+
+<div class="project-detail-container">
+    <nav class="breadcrumb">
+        <a href="/" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/#projects" class="breadcrumb-link">Projects</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">OIDC GCP Integration</span>
+    </nav>
+
+    <header class="project-header">
+        <h1>OIDC GCP Integration</h1>
+        <div class="project-meta">
+            <div class="tags">
+                <span class="tag">GCP</span>
+                <span class="tag">OIDC</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">IAM</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Security</span>
+            </div>
+            <a href="https://github.com/CharlesGM/oidc-gcp-integration" class="github-link">
+                <svg height="16" viewBox="0 0 16 16" width="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                View on GitHub
+            </a>
+        </div>
+    </header>
+
+    <section class="project-overview">
+        <h2>Project Overview</h2>
+        <p>This project implements secure authentication between GitHub Actions and Google Cloud Platform using OpenID Connect (OIDC). By leveraging OIDC, we eliminate the need for static service account keys and enhance security through dynamic, short-lived credentials.</p>
+    </section>
+
+    <section class="project-features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🔐 Keyless Authentication</h3>
+                <p>Secure authentication to GCP services without storing long-lived credentials in GitHub secrets.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Automated Setup</h3>
+                <p>Terraform modules for automated Workload Identity Federation setup and configuration.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📝 Infrastructure as Code</h3>
+                <p>Complete IaC implementation using Terraform for reproducible and version-controlled infrastructure.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛡️ Enhanced Security</h3>
+                <p>Short-lived credentials and fine-grained IAM permissions for improved security posture.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="technical-details">
+        <h2>Technical Implementation</h2>
+        <div class="implementation-steps">
+            <div class="step">
+                <h3>1. Workload Identity Pool Setup</h3>
+                <pre><code>resource "google_iam_workload_identity_pool" "github_pool" {
+  workload_identity_pool_id = "github-pool"
+  display_name             = "GitHub Actions Pool"
+  description             = "Identity pool for GitHub Actions OIDC"
+}</code></pre>
+            </div>
+            <div class="step">
+                <h3>2. Provider Configuration</h3>
+                <pre><code>resource "google_iam_workload_identity_pool_provider" "github_provider" {
+  workload_identity_pool_id          = google_iam_workload_identity_pool.github_pool.workload_identity_pool_id
+  workload_identity_pool_provider_id = "github-provider"
+  attribute_mapping                  = {
+    "google.subject"       = "assertion.sub"
+    "attribute.repository" = "assertion.repository"
+  }
+  oidc {
+    issuer_uri = "https://token.actions.githubusercontent.com"
+  }
+}</code></pre>
+            </div>
+            <div class="step">
+                <h3>3. GitHub Actions Workflow</h3>
+                <pre><code>jobs:
+  deploy:
+    permissions:
+      contents: 'read'
+      id-token: 'write'
+    steps:
+      - uses: 'actions/checkout@v3'
+      - uses: 'google-github-actions/auth@v1'
+        with:
+          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
+          service_account: '${{ secrets.SA_EMAIL }}'</code></pre>
+            </div>
+        </div>
+    </section>
+
+    <section class="benefits">
+        <h2>Benefits & Outcomes</h2>
+        <ul>
+            <li>✨ Eliminated need for managing service account keys</li>
+            <li>🔒 Enhanced security through ephemeral credentials</li>
+            <li>⚡ Streamlined CI/CD process</li>
+            <li>📊 Better audit logging and tracking</li>
+            <li>🎯 Reduced attack surface</li>
+        </ul>
+    </section>
+</div>
+
+<style>
+    .project-detail-container {
+        max-width: 900px;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+
+    .breadcrumb {
+        margin-bottom: 2rem;
+        color: #6c757d;
+    }
+
+    .breadcrumb-link {
+        color: #2c3e50;
+        text-decoration: none;
+    }
+
+    .breadcrumb-link:hover {
+        text-decoration: underline;
+    }
+
+    .breadcrumb-separator {
+        margin: 0 0.5rem;
+        color: #6c757d;
+    }
+
+    .breadcrumb-current {
+        color: #6c757d;
+    }
+
+    .project-header {
+        margin-bottom: 3rem;
+    }
+
+    .project-meta {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+
+    .tags {
+        display: flex;
+        gap: 0.5rem;
+        flex-wrap: wrap;
+    }
+
+    .tag {
+        background: #e9ecef;
+        padding: 0.25rem 0.75rem;
+        border-radius: 15px;
+        font-size: 0.85rem;
+        color: #495057;
+    }
+
+    .github-link {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.5rem;
+        padding: 0.5rem 1rem;
+        background: #f8f9fa;
+        border-radius: 6px;
+        text-decoration: none;
+        color: #2c3e50;
+        transition: all 0.3s ease;
+    }
+
+    .github-link:hover {
+        background: #e9ecef;
+    }
+
+    section {
+        margin-bottom: 3rem;
+        padding: 1.5rem;
+        background: #fff;
+        border-radius: 8px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    }
+
+    h2 {
+        color: #2c3e50;
+        margin-bottom: 1.5rem;
+        border-bottom: 2px solid #eee;
+        padding-bottom: 0.5rem;
+    }
+
+    .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+        background: #f8f9fa;
+        border-radius: 8px;
+    }
+
+    .feature-card h3 {
+        margin: 0 0 1rem 0;
+        color: #2c3e50;
+    }
+
+    .implementation-steps {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+    }
+
+    .step {
+        background: #f8f9fa;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .step h3 {
+        margin: 0 0 1rem 0;
+        color: #2c3e50;
+    }
+
+    pre {
+        background: #282c34;
+        color: #abb2bf;
+        padding: 1rem;
+        border-radius: 6px;
+        overflow-x: auto;
+        margin: 0;
+    }
+
+    code {
+        font-family: 'Fira Code', monospace;
+    }
+
+    .benefits ul {
+        list-style: none;
+        padding: 0;
+    }
+
+    .benefits li {
+        margin-bottom: 0.5rem;
+        padding: 0.5rem;
+        background: #f8f9fa;
+        border-radius: 4px;
+    }
+
+    @media (max-width: 768px) {
+        .project-detail-container {
+            padding: 1rem;
+        }
+
+        .project-meta {
+            flex-direction: column;
+            gap: 1rem;
+            align-items: flex-start;
+        }
+
+        .features-grid {
+            grid-template-columns: 1fr;
+        }
+    }
+</style> 
