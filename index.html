@@ -570,18 +570,21 @@ $ cat current_focus.txt
     /* First, let's add styles for the new layout */
     .main-content {
         display: flex;
-        gap: 3rem;
+        gap: 2rem;  /* Reduced from 3rem */
         align-items: flex-start;
+        justify-content: space-between;  /* Added to push content apart */
     }
 
     .content-left {
         flex: 1;
+        max-width: 1000px;  /* Limit width for better readability */
     }
 
     .content-right {
-        width: 300px;
+        width: 250px;  /* Reduced from 300px */
         position: sticky;
         top: 3rem;
+        margin-left: 2rem;  /* Add margin to push it right */
     }
 
     .github-stats {
@@ -592,5 +595,10 @@ $ cat current_focus.txt
     .github-stats h2 {
         font-size: 1.8rem; /* Slightly smaller heading */
         margin-bottom: 1.5rem; /* Reduced margin */
+    }
+
+    /* Make connect section more compact */
+    .connect {
+        padding: 1.8rem;  /* Reduced padding */
     }
 </style>
