@@ -248,14 +248,14 @@ $ cat current_focus.txt
     }
 
     .tech-stack {
-        padding: 2rem;
+        padding: 1.5rem;
     }
 
     .tech-grid {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 3rem; /* Increased gap */
-        padding: 1rem;
+        gap: 2rem;
+        padding: 0.5rem;
     }
 
     .tech-category {
@@ -264,24 +264,26 @@ $ cat current_focus.txt
 
     .tech-category h3 {
         color: #C5A572;
-        font-size: 1.3rem; /* Increased font size */
-        margin-bottom: 1.5rem;
-        padding-bottom: 0.8rem;
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 1px solid rgba(197, 165, 114, 0.3);
     }
 
     .tech-items {
         display: flex;
         flex-direction: column;
-        gap: 0.8rem;
+        gap: 0.6rem;
     }
 
     .tech-item {
         display: flex;
         align-items: center;
-        gap: 0.8rem;
-        padding: 0.8rem 1rem; /* Increased padding */
+        gap: 0.6rem;
+        padding: 0.5rem 0.8rem;
         border-radius: 4px;
         transition: all 0.3s ease;
+        white-space: nowrap;
     }
 
     .tech-item:hover {
@@ -289,13 +291,15 @@ $ cat current_focus.txt
     }
 
     .tech-item .icon {
-        font-size: 1.4rem; /* Increased font size */
-        min-width: 2rem;
+        font-size: 1.1rem;
+        min-width: 1.5rem;
     }
 
     .tech-item span:not(.icon) {
-        font-size: 1rem; /* Adjusted font size */
+        font-size: 0.85rem;
         color: #C5A572;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     .terminal-style {
@@ -477,6 +481,11 @@ $ cat current_focus.txt
 
         .tech-grid {
             grid-template-columns: repeat(2, 1fr);
+            gap: 1.5rem;
+        }
+
+        .tech-item span:not(.icon) {
+            font-size: 0.8rem;
         }
 
         .social-links {
@@ -522,16 +531,8 @@ $ cat current_focus.txt
             grid-template-columns: 1fr;
         }
         
-        .tech-category {
-            padding: 0;
-        }
-
-        .stats-container {
-            grid-template-columns: 1fr;
-        }
-
-        .stats-image {
-            max-width: 100%; /* Full width on mobile */
+        .tech-item span:not(.icon) {
+            font-size: 0.85rem; /* Can be slightly larger on mobile since we have more width */
         }
     }
 
