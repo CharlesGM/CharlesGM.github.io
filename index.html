@@ -143,9 +143,12 @@ $ cat current_focus.txt
 
 <style>
     body {
-        background-color: #faf6f1;
+        background-color: #000000;
+        background-image: linear-gradient(45deg, #111111 25%, #000000 25%, #000000 50%, #111111 50%, #111111 75%, #000000 75%, #000000 100%);
+        background-size: 40px 40px;
         margin: 0;
         padding: 0;
+        color: #C5A572;
     }
 
     .profile-container {
@@ -153,7 +156,7 @@ $ cat current_focus.txt
         margin: 0 auto;
         padding: 2rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        background-color: #faf6f1;
+        background-color: transparent;
     }
 
     .profile-header {
@@ -163,31 +166,31 @@ $ cat current_focus.txt
 
     .tagline {
         font-size: 1.2rem;
-        color: #666;
+        color: #C5A572;
         margin-top: 1rem;
     }
 
     section {
         margin-bottom: 3rem;
         padding: 1.5rem;
-        background: #f8f9fa;
+        background: rgba(0, 0, 0, 0.7);
         border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgba(197, 165, 114, 0.2);
+        border: 1px solid #C5A572;
+    }
+
+    h1, h2, h3, h4 {
+        color: #C5A572;
     }
 
     h2 {
-        color: #2c3e50;
         margin-bottom: 1.5rem;
-        border-bottom: 2px solid #eee;
+        border-bottom: 2px solid #C5A572;
         padding-bottom: 0.5rem;
     }
 
-    .stack-category {
-        margin-bottom: 1.5rem;
-    }
-
     .stack-category h3 {
-        color: #34495e;
+        color: #C5A572;
         margin-bottom: 0.8rem;
     }
 
@@ -199,16 +202,17 @@ $ cat current_focus.txt
     li {
         margin-bottom: 0.5rem;
         padding: 0.5rem;
-        background: #ffffff;
+        background: rgba(197, 165, 114, 0.1);
         border-radius: 4px;
+        color: #C5A572;
     }
 
     .terminal-style {
-        background: #282c34;
-        color: #abb2bf;
+        background: #000000;
+        color: #C5A572;
         padding: 1.5rem;
         border-radius: 6px;
-        overflow-x: auto;
+        border: 1px solid #C5A572;
     }
 
     .social-links {
@@ -222,15 +226,16 @@ $ cat current_focus.txt
         display: inline-flex;
         align-items: center;
         padding: 0.8rem 1.5rem;
-        background: #ffffff;
+        background: rgba(197, 165, 114, 0.1);
         border-radius: 6px;
         text-decoration: none;
-        color: #2c3e50;
+        color: #C5A572;
+        border: 1px solid #C5A572;
         transition: all 0.3s ease;
     }
 
     .social-link:hover {
-        background: #f0f2f5;
+        background: rgba(197, 165, 114, 0.2);
         transform: translateY(-2px);
     }
 
@@ -263,21 +268,22 @@ $ cat current_focus.txt
     }
 
     .project-card {
-        background: #ffffff;
+        background: rgba(0, 0, 0, 0.7);
         border-radius: 8px;
         padding: 1.5rem;
-        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+        box-shadow: 0 2px 4px rgba(197, 165, 114, 0.2);
+        border: 1px solid #C5A572;
         transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
 
     .project-card:hover {
         transform: translateY(-4px);
-        box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+        box-shadow: 0 4px 8px rgba(197, 165, 114, 0.3);
     }
 
     .project-header h3 {
         margin: 0 0 1rem 0;
-        color: #2c3e50;
+        color: #C5A572;
     }
 
     .project-tags {
@@ -288,22 +294,23 @@ $ cat current_focus.txt
     }
 
     .tag {
-        background: #f0f2f5;
+        background: rgba(197, 165, 114, 0.1);
         padding: 0.25rem 0.75rem;
         border-radius: 15px;
         font-size: 0.85rem;
-        color: #495057;
+        color: #C5A572;
+        border: 1px solid #C5A572;
     }
 
     .project-description {
-        color: #666;
+        color: #C5A572;
         margin-bottom: 1.5rem;
         line-height: 1.6;
     }
 
     .project-features h4 {
         margin: 0 0 0.5rem 0;
-        color: #2c3e50;
+        color: #C5A572;
     }
 
     .project-features ul {
@@ -329,29 +336,30 @@ $ cat current_focus.txt
         align-items: center;
         gap: 0.5rem;
         padding: 0.5rem 1rem;
-        background: #f0f2f5;
+        background: rgba(197, 165, 114, 0.1);
         border-radius: 6px;
         text-decoration: none;
-        color: #2c3e50;
+        color: #C5A572;
+        border: 1px solid #C5A572;
         transition: all 0.3s ease;
     }
 
     .project-link:hover {
-        background: #e9ecef;
+        background: rgba(197, 165, 114, 0.2);
     }
 
     .add-project {
-        border: 2px dashed #dee2e6;
+        border: 2px dashed #C5A572;
         display: flex;
         align-items: center;
         justify-content: center;
         min-height: 200px;
-        background: #ffffff;
+        background: rgba(0, 0, 0, 0.7);
     }
 
     .add-project-content {
         text-align: center;
-        color: #6c757d;
+        color: #C5A572;
     }
 
     .add-project-content svg {
@@ -380,5 +388,9 @@ $ cat current_focus.txt
         .projects-grid {
             grid-template-columns: 1fr;
         }
+    }
+
+    svg {
+        fill: #C5A572;
     }
 </style>
