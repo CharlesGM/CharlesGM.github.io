@@ -142,41 +142,54 @@ $ cat current_focus.txt
 </div>
 
 <style>
-    body {
+    html, body {
         background-color: #000000;
-        background-image: linear-gradient(45deg, #111111 25%, #000000 25%, #000000 50%, #111111 50%, #111111 75%, #000000 75%, #000000 100%);
-        background-size: 40px 40px;
         margin: 0;
         padding: 0;
         color: #C5A572;
+        min-height: 100vh;
+        width: 100%;
     }
 
     .profile-container {
-        max-width: 800px;
+        width: 100%;
+        max-width: 1200px; /* Increased from 800px */
         margin: 0 auto;
         padding: 2rem;
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         background-color: transparent;
+        min-height: 100vh;
+        box-sizing: border-box;
     }
 
     .profile-header {
         text-align: center;
         margin-bottom: 3rem;
+        width: 100%;
+    }
+
+    .profile-header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 1rem;
     }
 
     .tagline {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
         color: #C5A572;
-        margin-top: 1rem;
+        margin: 1rem auto;
+        max-width: 800px;
+        line-height: 1.6;
     }
 
     section {
         margin-bottom: 3rem;
-        padding: 1.5rem;
-        background: rgba(0, 0, 0, 0.7);
+        padding: 2rem;
+        background: #111111;
         border-radius: 8px;
         box-shadow: 0 2px 4px rgba(197, 165, 114, 0.2);
         border: 1px solid #C5A572;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     h1, h2, h3, h4 {
@@ -189,9 +202,19 @@ $ cat current_focus.txt
         padding-bottom: 0.5rem;
     }
 
+    .tech-stack {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    .stack-category {
+        margin-bottom: 2rem;
+    }
+
     .stack-category h3 {
-        color: #C5A572;
-        margin-bottom: 0.8rem;
+        font-size: 1.3rem;
+        margin-bottom: 1.2rem;
     }
 
     ul {
@@ -200,19 +223,24 @@ $ cat current_focus.txt
     }
 
     li {
-        margin-bottom: 0.5rem;
-        padding: 0.5rem;
-        background: rgba(197, 165, 114, 0.1);
+        margin-bottom: 0.8rem;
+        padding: 0.8rem;
+        background: #111111;
         border-radius: 4px;
         color: #C5A572;
+        font-size: 1.1rem;
     }
 
     .terminal-style {
-        background: #000000;
+        background: #111111;
         color: #C5A572;
-        padding: 1.5rem;
-        border-radius: 6px;
+        padding: 2rem;
+        border-radius: 8px;
         border: 1px solid #C5A572;
+        font-size: 1.1rem;
+        line-height: 1.6;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .social-links {
@@ -226,7 +254,7 @@ $ cat current_focus.txt
         display: inline-flex;
         align-items: center;
         padding: 0.8rem 1.5rem;
-        background: rgba(197, 165, 114, 0.1);
+        background: #111111;
         border-radius: 6px;
         text-decoration: none;
         color: #C5A572;
@@ -235,25 +263,27 @@ $ cat current_focus.txt
     }
 
     .social-link:hover {
-        background: rgba(197, 165, 114, 0.2);
+        background: #1a1a1a;
         transform: translateY(-2px);
     }
 
     .stats-container {
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        align-items: center;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+        gap: 2rem;
+        width: 100%;
     }
 
     .stats-image {
-        max-width: 100%;
-        border-radius: 6px;
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+        border: 1px solid #C5A572;
     }
 
     .fun-fact {
         text-align: center;
-        background: #ffffff;
+        background: #111111;
     }
 
     .projects {
@@ -262,13 +292,13 @@ $ cat current_focus.txt
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-        gap: 1.5rem;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        gap: 2rem;
         margin-top: 2rem;
     }
 
     .project-card {
-        background: rgba(0, 0, 0, 0.7);
+        background: #111111;
         border-radius: 8px;
         padding: 1.5rem;
         box-shadow: 0 2px 4px rgba(197, 165, 114, 0.2);
@@ -294,7 +324,7 @@ $ cat current_focus.txt
     }
 
     .tag {
-        background: rgba(197, 165, 114, 0.1);
+        background: #111111;
         padding: 0.25rem 0.75rem;
         border-radius: 15px;
         font-size: 0.85rem;
@@ -336,7 +366,7 @@ $ cat current_focus.txt
         align-items: center;
         gap: 0.5rem;
         padding: 0.5rem 1rem;
-        background: rgba(197, 165, 114, 0.1);
+        background: #111111;
         border-radius: 6px;
         text-decoration: none;
         color: #C5A572;
@@ -345,7 +375,7 @@ $ cat current_focus.txt
     }
 
     .project-link:hover {
-        background: rgba(197, 165, 114, 0.2);
+        background: #1a1a1a;
     }
 
     .add-project {
@@ -354,7 +384,7 @@ $ cat current_focus.txt
         align-items: center;
         justify-content: center;
         min-height: 200px;
-        background: rgba(0, 0, 0, 0.7);
+        background: #111111;
     }
 
     .add-project-content {
@@ -366,28 +396,57 @@ $ cat current_focus.txt
         margin-bottom: 1rem;
     }
 
+    @media (max-width: 1200px) {
+        .profile-container {
+            padding: 1.5rem;
+        }
+
+        .tech-stack {
+            grid-template-columns: 1fr;
+        }
+    }
+
     @media (max-width: 768px) {
         .profile-container {
             padding: 1rem;
         }
 
+        .profile-header h1 {
+            font-size: 2rem;
+        }
+
+        .tagline {
+            font-size: 1.2rem;
+        }
+
         section {
-            padding: 1rem;
+            padding: 1.5rem;
         }
 
-        .social-links {
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .social-link {
-            width: 100%;
-            justify-content: center;
+        .stats-container {
+            grid-template-columns: 1fr;
         }
 
         .projects-grid {
             grid-template-columns: 1fr;
         }
+    }
+
+    /* Ensure content is centered and readable */
+    p, li, .project-description {
+        line-height: 1.6;
+        font-size: 1.1rem;
+    }
+
+    /* Add some breathing room between sections */
+    section + section {
+        margin-top: 3rem;
+    }
+
+    /* Make headings more prominent */
+    h2 {
+        font-size: 2rem;
+        margin: 0 0 2rem 0;
     }
 
     svg {
