@@ -64,6 +64,7 @@
   description             = "Identity pool for GitHub Actions OIDC"
 }</code></pre>
             </div>
+
             <div class="step">
                 <h3>2. Provider Configuration</h3>
                 <p>Next, we configure the OIDC provider to establish trust between GitHub Actions and GCP. The attribute mapping ensures proper identity verification by matching GitHub's OIDC tokens with GCP's expected format.</p>
@@ -79,9 +80,51 @@
   }
 }</code></pre>
             </div>
+
             <div class="step">
-                <h3>3. GitHub Actions Workflow</h3>
-                <p>Finally, we configure the GitHub Actions workflow to request and use the temporary credentials. The workflow requires specific permissions to generate OIDC tokens and authenticate with GCP.</p>
+                <h3>3. Infrastructure Provisioning</h3>
+                <p>Navigate to the terraform/ directory and execute the following commands to provision the infrastructure:</p>
+                <pre><code># Initialize Terraform and download providers
+terraform init
+
+# Review the infrastructure changes
+terraform plan
+
+# Apply the infrastructure changes
+terraform apply</code></pre>
+                <p>After successful application, Terraform will output three important values needed for GitHub Actions:</p>
+                <ul class="terraform-outputs">
+                    <li>i. Workload Identity Provider URL</li>
+                    <li>ii. Service Account Email</li>
+                    <li>iii. Audience Value</li>
+                </ul>
+            </div>
+
+            <div class="step">
+                <h3>4. GitHub Actions Configuration</h3>
+                <p>Configure the following secrets in your GitHub repository settings using the Terraform outputs:</p>
+                <div class="secrets-config">
+                    <div class="secret-item">
+                        <h4>GCP_WORKLOAD_IDENTITY_PROVIDER</h4>
+                        <p>The full URL of your Workload Identity Provider, in the format:</p>
+                        <code>projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
+                    </div>
+                    <div class="secret-item">
+                        <h4>AUDIENCE</h4>
+                        <p>The audience value for the OIDC token, typically:</p>
+                        <code>https://iam.googleapis.com/projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
+                    </div>
+                    <div class="secret-item">
+                        <h4>GCP_SERVICE_ACCOUNT</h4>
+                        <p>The email address of the service account:</p>
+                        <code>github-actions@your-project.iam.gserviceaccount.com</code>
+                    </div>
+                </div>
+            </div>
+
+            <div class="step">
+                <h3>5. GitHub Actions Workflow</h3>
+                <p>Finally, configure the GitHub Actions workflow to use these secrets for authentication:</p>
                 <pre><code>jobs:
   deploy:
     permissions:
@@ -91,20 +134,21 @@
       - uses: 'actions/checkout@v3'
       - uses: 'google-github-actions/auth@v1'
         with:
-          workload_identity_provider: '${{ secrets.WIF_PROVIDER }}'
-          service_account: '${{ secrets.SA_EMAIL }}'</code></pre>
+          workload_identity_provider: '${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}'
+          service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
+          audience: '${{ secrets.AUDIENCE }}'</code></pre>
             </div>
         </div>
     </section>
 
     <section class="benefits">
-        <h2>Benefits & Outcomes of using OIDC for GCP integration</h2>
-        <ul>
-            <li>✨ Eliminated need for managing service account keys</li>
-            <li>🔒 Enhanced security through ephemeral credentials</li>
-            <li>⚡ Streamlined CI/CD process</li>
-            <li>📊 Better audit logging and tracking</li>
-            <li>🎯 Reduced attack surface</li>
+        <h2>Benefits & Outcomes</h2>
+        <ul class="benefits-list">
+            <li>i. ✨ Eliminated need for managing service account keys</li>
+            <li>ii. 🔒 Enhanced security through ephemeral credentials</li>
+            <li>iii. ⚡ Streamlined CI/CD process</li>
+            <li>iv. 📊 Better audit logging and tracking</li>
+            <li>v 🎯 Reduced attack surface</li>
         </ul>
     </section>
 </div>
@@ -275,21 +319,21 @@
         font-family: 'Fira Code', monospace;
     }
 
-    .benefits ul {
+    .benefits-list {
         list-style: none;
         padding: 0;
     }
 
-    .benefits li {
+    .benefits-list li {
         margin-bottom: 0.8rem;
         padding: 0.8rem 1rem;
         background: #111111;
         border-radius: 6px;
-        border: 1px solid rgba(197, 165, 114, 0.3);
+        color: #C5A572;
         transition: transform 0.3s ease;
     }
 
-    .benefits li:hover {
+    .benefits-list li:hover {
         transform: translateY(-2px);
     }
 
@@ -315,5 +359,50 @@
         section {
             padding: 1.5rem;
         }
+    }
+
+    .terraform-outputs {
+        list-style-type: none;
+        padding-left: 0;
+        margin-top: 1rem;
+    }
+
+    .terraform-outputs li {
+        padding: 0.5rem 0;
+        color: #C5A572;
+    }
+
+    .secrets-config {
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        margin-top: 1rem;
+    }
+
+    .secret-item {
+        background: rgba(197, 165, 114, 0.1);
+        border-radius: 6px;
+        padding: 1rem;
+        border: 1px solid rgba(197, 165, 114, 0.3);
+    }
+
+    .secret-item h4 {
+        margin: 0 0 0.5rem 0;
+        color: #C5A572;
+    }
+
+    .secret-item code {
+        display: block;
+        background: #000000;
+        padding: 0.75rem;
+        border-radius: 4px;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        overflow-x: auto;
+    }
+
+    .secret-item p {
+        margin: 0.5rem 0;
+        font-size: 0.95rem;
     }
 </style> 
