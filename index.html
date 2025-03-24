@@ -6,46 +6,80 @@
 
     <section class="tech-stack">
         <h2>🛠 Tech Stack</h2>
-        
-        <div class="stack-category">
-            <h3>Cloud & Infrastructure</h3>
-            <ul>
-                <li>☁️ Multi-Cloud: AWS | Azure | GCP</li>
-                <li>🚢 Containers: Docker | Linux</li>
-                <li>🎡 Orchestration: Kubernetes (AKS, GKE, EKS)</li>
-                <li>🏗️ IaC: Terraform | Crossplane</li>
-                <li>📦 Package Management: Helm Charts</li>
-                <li>🔄 CI/CD: GitHub Actions | Azure DevOps | ArgoCD | GitOps</li>
-            </ul>
-        </div>
+        <div class="tech-grid">
+            <div class="tech-category">
+                <h3>Cloud & Infrastructure</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <span class="icon">☁️</span>
+                        <span>Multi-Cloud: AWS | Azure | GCP</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🚢</span>
+                        <span>Containers: Docker | Linux</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🎡</span>
+                        <span>Kubernetes (AKS, GKE, EKS)</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🏗️</span>
+                        <span>IaC: Terraform | Crossplane</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">📦</span>
+                        <span>Helm Charts</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🔄</span>
+                        <span>CI/CD: GitHub Actions | ArgoCD</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="stack-category">
-            <h3>Security & Networking</h3>
-            <ul>
-                <li>🔒 Identity: IAM | OAuth | MFA</li>
-                <li>🛡️ Security Testing: SAST/DAST</li>
-                <li>🏢 Compliance: PCI-DSS</li>
-                <li>🌐 Networking: VPCs | OSI Model</li>
-                <li>🔐 Network Security</li>
-            </ul>
-        </div>
+            <div class="tech-category">
+                <h3>Security & Networking</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <span class="icon">🔒</span>
+                        <span>Identity: IAM | OAuth | MFA</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🛡️</span>
+                        <span>Security Testing: SAST/DAST</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🏢</span>
+                        <span>Compliance: PCI-DSS</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🌐</span>
+                        <span>Networking: VPCs | OSI Model</span>
+                    </div>
+                </div>
+            </div>
 
-        <div class="stack-category">
-            <h3>Monitoring & Observability</h3>
-            <ul>
-                <li>📊 Metrics: Prometheus | Grafana</li>
-                <li>🔍 Logging: ELK Stack</li>
-                <li>📈 Performance Monitoring</li>
-            </ul>
-        </div>
-
-        <div class="stack-category">
-            <h3>Development & Blockchain</h3>
-            <ul>
-                <li>🐧 Scripting: Bash | Python</li>
-                <li>⛓️ DLT: Hyperledger Fabric</li>
-                <li>🔗 Smart Contracts</li>
-            </ul>
+            <div class="tech-category">
+                <h3>Monitoring & Development</h3>
+                <div class="tech-items">
+                    <div class="tech-item">
+                        <span class="icon">📊</span>
+                        <span>Metrics: Prometheus | Grafana</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🔍</span>
+                        <span>Logging: ELK Stack</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">🐧</span>
+                        <span>Scripting: Bash | Python</span>
+                    </div>
+                    <div class="tech-item">
+                        <span class="icon">⛓️</span>
+                        <span>DLT: Hyperledger Fabric</span>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -149,44 +183,44 @@ $ cat current_focus.txt
         color: #C5A572;
         min-height: 100vh;
         width: 100%;
+        display: flex;
+        justify-content: center;
     }
 
     .profile-container {
         width: 100%;
-        max-width: 1200px; /* Increased from 800px */
-        margin: 0 auto;
-        padding: 2rem;
+        max-width: 1400px; /* Increased from 1200px */
+        padding: 3rem 4rem; /* Increased padding */
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         background-color: transparent;
-        min-height: 100vh;
         box-sizing: border-box;
     }
 
     .profile-header {
         text-align: center;
-        margin-bottom: 3rem;
+        margin-bottom: 4rem; /* Increased margin */
         width: 100%;
     }
 
     .profile-header h1 {
-        font-size: 2.5rem;
-        margin-bottom: 1rem;
+        font-size: 3rem; /* Increased font size */
+        margin-bottom: 1.5rem;
     }
 
     .tagline {
-        font-size: 1.4rem;
+        font-size: 1.5rem; /* Increased font size */
         color: #C5A572;
-        margin: 1rem auto;
-        max-width: 800px;
+        margin: 1.5rem auto;
+        max-width: 1000px; /* Increased max-width */
         line-height: 1.6;
     }
 
     section {
-        margin-bottom: 3rem;
-        padding: 2rem;
+        margin-bottom: 4rem; /* Increased margin */
+        padding: 2.5rem; /* Increased padding */
         background: #111111;
-        border-radius: 8px;
-        box-shadow: 0 2px 4px rgba(197, 165, 114, 0.2);
+        border-radius: 12px; /* Increased border radius */
+        box-shadow: 0 4px 8px rgba(197, 165, 114, 0.2);
         border: 1px solid #C5A572;
         width: 100%;
         box-sizing: border-box;
@@ -197,38 +231,59 @@ $ cat current_focus.txt
     }
 
     h2 {
-        margin-bottom: 1.5rem;
-        border-bottom: 2px solid #C5A572;
-        padding-bottom: 0.5rem;
+        margin-bottom: 2rem;
+        letter-spacing: 0.5px;
     }
 
     .tech-stack {
+        padding: 2rem;
+    }
+
+    .tech-grid {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 3rem; /* Increased gap */
+        padding: 1rem;
     }
 
-    .stack-category {
-        margin-bottom: 2rem;
+    .tech-category {
+        background: transparent;
     }
 
-    .stack-category h3 {
-        font-size: 1.3rem;
-        margin-bottom: 1.2rem;
-    }
-
-    ul {
-        list-style: none;
-        padding-left: 0;
-    }
-
-    li {
-        margin-bottom: 0.8rem;
-        padding: 0.8rem;
-        background: #111111;
-        border-radius: 4px;
+    .tech-category h3 {
         color: #C5A572;
-        font-size: 1.1rem;
+        font-size: 1.3rem; /* Increased font size */
+        margin-bottom: 1.5rem;
+        padding-bottom: 0.8rem;
+    }
+
+    .tech-items {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8rem;
+    }
+
+    .tech-item {
+        display: flex;
+        align-items: center;
+        gap: 0.8rem;
+        padding: 0.8rem 1rem; /* Increased padding */
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    .tech-item:hover {
+        background: rgba(197, 165, 114, 0.1);
+    }
+
+    .tech-item .icon {
+        font-size: 1.4rem; /* Increased font size */
+        min-width: 2rem;
+    }
+
+    .tech-item span:not(.icon) {
+        font-size: 1rem; /* Adjusted font size */
+        color: #C5A572;
     }
 
     .terminal-style {
@@ -246,14 +301,14 @@ $ cat current_focus.txt
     .social-links {
         display: flex;
         flex-wrap: wrap;
-        gap: 1rem;
+        gap: 1.5rem; /* Increased gap */
         justify-content: center;
     }
 
     .social-link {
         display: inline-flex;
         align-items: center;
-        padding: 0.8rem 1.5rem;
+        padding: 1rem 2rem; /* Increased padding */
         background: #111111;
         border-radius: 6px;
         text-decoration: none;
@@ -269,9 +324,8 @@ $ cat current_focus.txt
 
     .stats-container {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
-        gap: 2rem;
-        width: 100%;
+        grid-template-columns: repeat(auto-fit, minmax(500px, 1fr)); /* Increased minmax */
+        gap: 2.5rem;
     }
 
     .stats-image {
@@ -292,9 +346,9 @@ $ cat current_focus.txt
 
     .projects-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-        gap: 2rem;
-        margin-top: 2rem;
+        grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Increased minmax */
+        gap: 2.5rem;
+        margin-top: 2.5rem;
     }
 
     .project-card {
@@ -401,8 +455,8 @@ $ cat current_focus.txt
             padding: 1.5rem;
         }
 
-        .tech-stack {
-            grid-template-columns: 1fr;
+        .tech-grid {
+            grid-template-columns: repeat(2, 1fr);
         }
     }
 
@@ -429,6 +483,14 @@ $ cat current_focus.txt
 
         .projects-grid {
             grid-template-columns: 1fr;
+        }
+
+        .tech-grid {
+            grid-template-columns: 1fr;
+        }
+        
+        .tech-category {
+            padding: 0;
         }
     }
 
