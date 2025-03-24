@@ -21,13 +21,6 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Debug directory
-        run: |
-          pwd
-          ls -la
-          echo "Content of gh_pages directory:"
-          ls -la gh_pages/
-      
       - name: Setup Pages
         uses: actions/configure-pages@v4
         
