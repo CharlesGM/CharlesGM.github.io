@@ -1,3 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OIDC GCP Integration - Charles Mbugua</title>
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <!-- Alternative PNG format for modern browsers -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
+</head>
+<body>
 <div class="project-container">
     <div class="main-content">
         <div class="project-detail-container">
@@ -188,12 +199,16 @@ terraform apply</code></pre>
     }
 
     .project-container {
+        width: 100%;
+        max-width: 1200px;
+        padding: 3rem 4rem;
+        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+        background-color: transparent;
+        box-sizing: border-box;
         display: flex;
         flex-direction: row-reverse;
         gap: 2rem;
-        max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem 3rem;
     }
 
     .sidebar {
@@ -293,6 +308,8 @@ terraform apply</code></pre>
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(197, 165, 114, 0.2);
         border: 1px solid #C5A572;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     h1, h2, h3, h4 {
@@ -517,4 +534,6 @@ terraform apply</code></pre>
             width: calc(50% - 0.5rem);
         }
     }
-</style> 
+</style>
+</body>
+</html> 
