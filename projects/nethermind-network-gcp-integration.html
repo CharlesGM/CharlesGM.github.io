@@ -27,7 +27,9 @@
 
     <section class="project-overview">
         <h2>Project Overview</h2>
-        <p>I've created a project that sets up an Ethereum testnet using Nethermind nodes orchestrated with Helm charts on Google Cloud Platform. This setup includes a bootnode and multiple mining nodes, providing a robust environment for smart contract development and testing.</p>
+        <p>This project sets up an Ethereum testnet using Nethermind nodes orchestrated with Helm charts on Google Cloud Platform. This setup includes a bootnode and multiple mining nodes, providing a robust environment for smart contract development and testing.</p>
+
+        <p>It can be replicated exactly as it is - all the way from setting up infra using terraform, to obtaining Eth gas from the Sepolia faucet and testing a sample contract deployment.</p>
     </section>
 
     <section class="project-features">
@@ -39,11 +41,11 @@
             </div>
             <div class="feature-card">
                 <h3>🔧 Comprehensive Testing Tools</h3>
-                <p>I've included a suite of testing scripts and guides for smart contract development, from local testing to production deployment.</p>
+                <p>Also included a suite of testing scripts and guides for smart contract development, from local testing to production deployment.</p>
             </div>
             <div class="feature-card">
                 <h3>🔄 CI/CD Pipeline</h3>
-                <p>I've set up an automated deployment pipeline using GitHub Actions for seamless updates and maintenance.</p>
+                <p>The project sets up an automated deployment pipeline using GitHub Actions for seamless updates and maintenance.</p>
             </div>
             <div class="feature-card">
                 <h3>📚 Detailed Documentation</h3>
@@ -172,9 +174,9 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
     }
 
     .project-detail-container {
-        max-width: 1000px;
+        max-width: 1200px;
         margin: 0 auto;
-        padding: 2rem;
+        padding: 2rem 3rem;
         background-color: transparent;
         color: #C5A572;
     }
@@ -272,7 +274,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
     .features-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
         gap: 1.5rem;
     }
 
@@ -349,7 +351,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
     @media (max-width: 768px) {
         .project-detail-container {
-            padding: 1rem;
+            padding: 1rem 1.5rem;
         }
 
         .project-meta {

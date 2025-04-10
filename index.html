@@ -11,7 +11,10 @@
 <div class="profile-container">
     <header class="profile-header">
         <h1>Hi there 👋, I'm Charles!</h1>
-        <p class="personal-story">I enjoy tinkering, thus DevOps/SRE. Interested in discussing DevOps/SRE and Blockchain, sometimes AI as I look for more compute power to run my own LLM (hopefully soon)</p>
+        <p class="personal-story">
+            I enjoy tinkering, thus DevOps/SRE.<br>
+            Interested in discussing DevOps/SRE and Blockchain, sometimes AI as I look for more compute power to run my own LLM (hopefully soon)
+        </p>
     </header>
 
     <div class="main-content">
@@ -251,8 +254,8 @@ $ cat current_focus.txt
 
     .profile-container {
         width: 100%;
-        max-width: 1400px; /* Increased from 1200px */
-        padding: 3rem 4rem; /* Increased padding */
+        max-width: 1600px; /* Increased from 1400px */
+        padding: 3rem 5rem; /* Increased horizontal padding */
         font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
         background-color: transparent;
         box-sizing: border-box;
@@ -536,7 +539,7 @@ $ cat current_focus.txt
 
     @media (max-width: 1200px) {
         .profile-container {
-            padding: 1.5rem;
+            padding: 2rem 3rem; /* Increased horizontal padding */
         }
 
         .tech-grid {
@@ -564,7 +567,7 @@ $ cat current_focus.txt
 
     @media (max-width: 768px) {
         .profile-container {
-            padding: 1rem;
+            padding: 1.5rem 2rem; /* Increased horizontal padding */
         }
 
         .profile-header h1 {
@@ -650,5 +653,23 @@ $ cat current_focus.txt
     /* Make connect section more compact */
     .connect {
         padding: 1.8rem;  /* Reduced padding */
+    }
+
+    .project-detail-container {
+        max-width: 1200px; /* Increased from 1000px */
+        margin: 0 auto;
+        padding: 2rem 3rem; /* Adjusted padding for better width usage */
+        background-color: transparent;
+        color: #C5A572;
+    }
+
+    .features-grid {
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for better width usage */
+    }
+
+    @media (max-width: 768px) {
+        .project-detail-container {
+            padding: 1rem 1.5rem; /* Adjusted padding for smaller screens */
+        }
     }
 </style>
