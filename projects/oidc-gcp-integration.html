@@ -189,7 +189,7 @@ terraform apply</code></pre>
 
     .project-container {
         display: flex;
-        flex-direction: row;
+        flex-direction: row-reverse;
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -201,12 +201,10 @@ terraform apply</code></pre>
         position: sticky;
         top: 3rem;
         height: fit-content;
-        margin-left: auto;
     }
 
     .main-content {
         flex: 1;
-        max-width: 900px;
     }
 
     .project-detail-container {
@@ -453,7 +451,7 @@ terraform apply</code></pre>
     .social-links {
         display: flex;
         flex-direction: column;
-        gap: 1rem;
+        gap: 0.8rem;
         background: #111111;
         padding: 1.5rem;
         border-radius: 12px;
@@ -470,20 +468,33 @@ terraform apply</code></pre>
     }
 
     .social-link-container {
-        width: 100%;
-        background: transparent;
+        background: #111111;
         border: 1px solid #C5A572;
         border-radius: 6px;
+        overflow: hidden;
+        width: 100%;
         padding: 0;
         transition: transform 0.3s ease;
+    }
+
+    .social-link-container:hover {
+        transform: translateY(-2px);
     }
 
     .social-link {
         display: block;
         width: 100%;
-        padding: 0.8rem 1rem;
-        color: #C5A572;
+        padding: 0.8rem 1.2rem;
         text-decoration: none;
+        color: #C5A572;
+        transition: all 0.3s ease;
+        border: none;
+        background: transparent;
+        font-size: 1rem;
+    }
+
+    .social-link:hover {
+        background: rgba(197, 165, 114, 0.1);
     }
 
     @media (max-width: 900px) {
@@ -494,7 +505,6 @@ terraform apply</code></pre>
         .sidebar {
             width: 100%;
             position: static;
-            margin-left: 0;
         }
         
         .social-links {
