@@ -9,81 +9,77 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon.png">
 </head>
 <body>
-<div class="project-container">
-    <div class="main-content">
-        <div class="project-detail-container">
-            <nav class="breadcrumb">
-                <a href="/" class="breadcrumb-link">Home</a>
-                <span class="breadcrumb-separator">/</span>
-                <a href="/#projects" class="breadcrumb-link">Projects</a>
-                <span class="breadcrumb-separator">/</span>
-                <span class="breadcrumb-current">OIDC GCP Integration</span>
-            </nav>
+<div class="project-detail-container">
+    <nav class="breadcrumb">
+        <a href="/" class="breadcrumb-link">Home</a>
+        <span class="breadcrumb-separator">/</span>
+        <a href="/#projects" class="breadcrumb-link">Projects</a>
+        <span class="breadcrumb-separator">/</span>
+        <span class="breadcrumb-current">OIDC GCP Integration</span>
+    </nav>
 
-            <header class="project-header">
-                <h1>OIDC GCP Integration</h1>
-                <div class="project-meta">
-                    <div class="tags">
-                        <span class="tag">GCP</span>
-                        <span class="tag">OIDC</span>
-                        <span class="tag">GitHub Actions</span>
-                        <span class="tag">IAM</span>
-                        <span class="tag">Terraform</span>
-                        <span class="tag">Security</span>
-                    </div>
-                    <a href="https://github.com/CharlesGM/oidc-gcp-integration-project" class="github-link" target="_blank" rel="noopener noreferrer">
-                        <svg height="16" viewBox="0 0 16 16" width="16" style="margin-right: 8px">
-                            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                        </svg>
-                        View on GitHub
-                    </a>
-                </div>
-            </header>
+    <header class="project-header">
+        <h1>OIDC GCP Integration</h1>
+        <div class="project-meta">
+            <div class="tags">
+                <span class="tag">GCP</span>
+                <span class="tag">OIDC</span>
+                <span class="tag">GitHub Actions</span>
+                <span class="tag">IAM</span>
+                <span class="tag">Terraform</span>
+                <span class="tag">Security</span>
+            </div>
+            <a href="https://github.com/CharlesGM/oidc-gcp-integration-project" class="github-link" target="_blank" rel="noopener noreferrer">
+                <svg height="16" viewBox="0 0 16 16" width="16"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path></svg>
+                View on GitHub
+            </a>
+        </div>
+    </header>
 
-            <section class="project-overview">
-                <h2>Project Overview</h2>
-                <p>The aim of this project is to demonstrate how to securely authenticate GitHub Actions workflows and Google Cloud Platform using OpenID Connect (OIDC) - courtesy of GCP's Workload Identity Federation. By leveraging OIDC, we eliminate the need for static service account keys and enhance security through dynamic, short-lived credentials.</p>
-            </section>
+    <section class="project-overview">
+        <h2>Project Overview</h2>
+        <p>The aim of this project is to demonstrate how to securely authenticate GitHub Actions workflows and Google Cloud Platform using OpenID Connect (OIDC) - courtesy of GCP's Workload Identity Federation. By leveraging OIDC, we eliminate the need for static service account keys and enhance security through dynamic, short-lived credentials.</p>
+    </section>
 
-            <section class="project-features">
-                <h2>Key Features</h2>
-                <div class="features-grid">
-                    <div class="feature-card">
-                        <h3>🔐 Keyless Authentication</h3>
-                        <p>Compared to using GCP service accounts with keys, OIDC provides secure authentication to GCP services without storing long-lived credentials as GitHub secrets.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🔄 Automated Setup</h3>
-                        <p>This project makes use of terraform modules for infrastructure provisioning, as well as for automated Workload Identity Federation setup and configuration.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>📝 Infrastructure as Code</h3>
-                        <p>Complete IaC implementation using Terraform for reproducible and version-controlled infrastructure.</p>
-                    </div>
-                    <div class="feature-card">
-                        <h3>🛡️ Enhanced Security</h3>
-                        <p>Short-lived credentials and fine-grained IAM permissions for improved security posture.</p>
-                    </div>
-                </div>
-            </section>
+    <section class="project-features">
+        <h2>Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <h3>🔐 Keyless Authentication</h3>
+                <p>Compared to using GCP service accounts with keys, OIDC provides secure authentication to GCP services without storing long-lived credentials as GitHub secrets.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🔄 Automated Setup</h3>
+                <p>This project makes use of terraform modules for infrastructure provisioning, as well as for automated Workload Identity Federation setup and configuration.</p>
+            </div>
+            <div class="feature-card">
+                <h3>📝 Infrastructure as Code</h3>
+                <p>Complete IaC implementation using Terraform for reproducible and version-controlled infrastructure.</p>
+            </div>
+            <div class="feature-card">
+                <h3>🛡️ Enhanced Security</h3>
+                <p>Short-lived credentials and fine-grained IAM permissions for improved security posture.</p>
+            </div>
+        </div>
+    </section>
 
-            <section class="technical-details">
-                <h2>Technical Implementation</h2>
-                <div class="implementation-steps">
-                    <div class="step">
-                        <h3>1. Workload Identity Pool Setup</h3>
-                        <p>First, we create a Workload Identity Pool in GCP. This pool serves as a collection point for external identities and allows us to manage GitHub Actions authentication in a centralized way.</p>
-                        <pre><code>resource "google_iam_workload_identity_pool" "github_pool" {
+    <section class="technical-details">
+        <h2>Technical Implementation</h2>
+        <div class="implementation-steps">
+            <div class="step">
+                <h3>1. Workload Identity Pool Setup</h3>
+                <p>First, we create a Workload Identity Pool in GCP. This pool serves as a collection point for external identities and allows us to manage GitHub Actions authentication in a centralized way.</p>
+                <pre><code>resource "google_iam_workload_identity_pool" "github_pool" {
   workload_identity_pool_id = "github-pool"
   display_name             = "GitHub Actions Pool"
   description             = "Identity pool for GitHub Actions OIDC"
 }</code></pre>
-                    </div>
+            </div>
 
-                    <div class="step">
-                        <h3>2. Provider Configuration</h3>
-                        <p>Next, we configure the OIDC provider to establish trust between GitHub Actions and GCP. The attribute mapping ensures proper identity verification by matching GitHub's OIDC tokens with GCP's expected format.</p>
-                        <pre><code>resource "google_iam_workload_identity_pool_provider" "github_provider" {
+            <div class="step">
+                <h3>2. Provider Configuration</h3>
+                <p>Next, we configure the OIDC provider to establish trust between GitHub Actions and GCP. The attribute mapping ensures proper identity verification by matching GitHub's OIDC tokens with GCP's expected format.</p>
+                <pre><code>resource "google_iam_workload_identity_pool_provider" "github_provider" {
   workload_identity_pool_id          = google_iam_workload_identity_pool.github_pool.workload_identity_pool_id
   workload_identity_pool_provider_id = "github-provider"
   attribute_mapping                  = {
@@ -94,12 +90,12 @@
     issuer_uri = "https://token.actions.githubusercontent.com"
   }
 }</code></pre>
-                    </div>
+            </div>
 
-                    <div class="step">
-                        <h3>3. Infrastructure Provisioning</h3>
-                        <p>Navigate to the terraform/ directory and execute the following commands to provision the infrastructure:</p>
-                        <pre><code># Initialize Terraform and download providers
+            <div class="step">
+                <h3>3. Infrastructure Provisioning</h3>
+                <p>Navigate to the terraform/ directory and execute the following commands to provision the infrastructure:</p>
+                <pre><code># Initialize Terraform and download providers
 terraform init
 
 # Review the infrastructure changes
@@ -107,40 +103,40 @@ terraform plan
 
 # Apply the infrastructure changes
 terraform apply</code></pre>
-                        <p>After successful application, Terraform will output three important values needed for GitHub Actions:</p>
-                        <ul class="terraform-outputs">
-                            <li>i. Workload Identity Provider URL</li>
-                            <li>ii. Service Account Email</li>
-                            <li>iii. Audience Value</li>
-                        </ul>
-                    </div>
+                <p>After successful application, Terraform will output three important values needed for GitHub Actions:</p>
+                <ul class="terraform-outputs">
+                    <li>i. Workload Identity Provider URL</li>
+                    <li>ii. Service Account Email</li>
+                    <li>iii. Audience Value</li>
+                </ul>
+            </div>
 
-                    <div class="step">
-                        <h3>4. GitHub Actions Configuration</h3>
-                        <p>Configure the following secrets in your GitHub repository settings using the Terraform outputs:</p>
-                        <div class="secrets-config">
-                            <div class="secret-item">
-                                <h4>GCP_WORKLOAD_IDENTITY_PROVIDER</h4>
-                                <p>The full URL of your Workload Identity Provider, in the format:</p>
-                                <code>projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
-                            </div>
-                            <div class="secret-item">
-                                <h4>AUDIENCE</h4>
-                                <p>The audience value for the OIDC token, typically:</p>
-                                <code>https://iam.googleapis.com/projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
-                            </div>
-                            <div class="secret-item">
-                                <h4>GCP_SERVICE_ACCOUNT</h4>
-                                <p>The email address of the service account:</p>
-                                <code>github-actions@your-project.iam.gserviceaccount.com</code>
-                            </div>
-                        </div>
+            <div class="step">
+                <h3>4. GitHub Actions Configuration</h3>
+                <p>Configure the following secrets in your GitHub repository settings using the Terraform outputs:</p>
+                <div class="secrets-config">
+                    <div class="secret-item">
+                        <h4>GCP_WORKLOAD_IDENTITY_PROVIDER</h4>
+                        <p>The full URL of your Workload Identity Provider, in the format:</p>
+                        <code>projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
                     </div>
+                    <div class="secret-item">
+                        <h4>AUDIENCE</h4>
+                        <p>The audience value for the OIDC token, typically:</p>
+                        <code>https://iam.googleapis.com/projects/123456789/locations/global/workloadIdentityPools/github-pool/providers/github-provider</code>
+                    </div>
+                    <div class="secret-item">
+                        <h4>GCP_SERVICE_ACCOUNT</h4>
+                        <p>The email address of the service account:</p>
+                        <code>github-actions@your-project.iam.gserviceaccount.com</code>
+                    </div>
+                </div>
+            </div>
 
-                    <div class="step">
-                        <h3>5. GitHub Actions Workflow</h3>
-                        <p>Finally, configure the GitHub Actions workflow to use these secrets for authentication:</p>
-                        <pre><code>jobs:
+            <div class="step">
+                <h3>5. GitHub Actions Workflow</h3>
+                <p>Finally, configure the GitHub Actions workflow to use these secrets for authentication:</p>
+                <pre><code>jobs:
   deploy:
     permissions:
       contents: 'read'
@@ -152,43 +148,32 @@ terraform apply</code></pre>
           workload_identity_provider: '${{ secrets.GCP_WORKLOAD_IDENTITY_PROVIDER }}'
           service_account: '${{ secrets.GCP_SERVICE_ACCOUNT }}'
           audience: '${{ secrets.AUDIENCE }}'</code></pre>
-                    </div>
-                </div>
-            </section>
+            </div>
+        </div>
+    </section>
 
-            <section class="benefits">
-                <h2>Benefits & Outcomes</h2>
-                <ul class="benefits-list">
-                    <li>i. Eliminated need for managing service account keys</li>
-                    <li>ii. Enhanced security through ephemeral credentials</li>
-                    <li>iii. Streamlined CI/CD process</li>
-                    <li>iv. Better audit logging and tracking</li>
-                    <li>v. Reduced attack surface</li>
-                </ul>
-            </section>
+    <section class="benefits">
+        <h2>Benefits & Outcomes</h2>
+        <ul class="benefits-list">
+            <li>i. Eliminated need for managing service account keys</li>
+            <li>ii. Enhanced security through ephemeral credentials</li>
+            <li>iii. Streamlined CI/CD process</li>
+            <li>iv. Better audit logging and tracking</li>
+            <li>v. Reduced attack surface</li>
+        </ul>
+    </section>
+
+    <div class="social-links">
+        <div class="social-link-container">
+            <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
+        </div>
+        <div class="social-link-container">
+            <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+        </div>
+        <div class="social-link-container">
+            <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
         </div>
     </div>
-    
-    <div class="sidebar">
-        <div class="social-links">
-            <h3>Let's Chat:</h3>
-            <div class="social-link-container">
-                <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
-            </div>
-            <div class="social-link-container">
-                <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-            </div>
-            <div class="social-link-container">
-                <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">
-                    <svg height="16" viewBox="0 0 16 16" width="16" style="margin-right: 8px">
-                        <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                    </svg>
-                    GitHub
-                </a>
-            </div>
-        </div>
-    </div>
-</div>
 </div>
 
 <style>
@@ -203,35 +188,10 @@ terraform apply</code></pre>
         justify-content: center;
     }
 
-    .project-container {
-        width: 100%;
-        max-width: 1200px;
-        padding: 3rem 4rem;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-        background-color: transparent;
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: row-reverse;
-        gap: 2rem;
-        margin: 0 auto;
-    }
-
-    .sidebar {
-        width: 250px;
-        position: sticky;
-        top: 3rem;
-        height: fit-content;
-        margin-left: auto;
-    }
-
-    .main-content {
-        flex: 1;
-    }
-
     .project-detail-container {
-        max-width: 1200px;
+        max-width: 1000px;
         margin: 0 auto;
-        padding: 2rem 3rem;
+        padding: 2rem;
         background-color: transparent;
         color: #C5A572;
     }
@@ -314,8 +274,6 @@ terraform apply</code></pre>
         border-radius: 12px;
         box-shadow: 0 4px 8px rgba(197, 165, 114, 0.2);
         border: 1px solid #C5A572;
-        width: 100%;
-        box-sizing: border-box;
     }
 
     h1, h2, h3, h4 {
@@ -331,7 +289,7 @@ terraform apply</code></pre>
 
     .features-grid {
         display: grid;
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         gap: 1.5rem;
     }
 
@@ -408,7 +366,7 @@ terraform apply</code></pre>
 
     @media (max-width: 768px) {
         .project-detail-container {
-            padding: 1rem 1.5rem;
+            padding: 1rem;
         }
 
         .project-meta {
@@ -473,68 +431,24 @@ terraform apply</code></pre>
 
     .social-links {
         display: flex;
-        flex-direction: column;
-        gap: 0.8rem;
-        background: #111111;
-        padding: 1.5rem;
-        border-radius: 12px;
-        border: 1px solid #C5A572;
-        margin-bottom: 2rem;
-    }
-
-    .social-links h3 {
-        margin-top: 0;
-        margin-bottom: 1rem;
-        text-align: center;
-        border-bottom: 1px solid rgba(197, 165, 114, 0.3);
-        padding-bottom: 0.5rem;
-        color: #C5A572;
-        font-size: 1.2rem;
+        justify-content: space-between;
+        margin-top: 2rem;
     }
 
     .social-link-container {
         background: #111111;
-        border: 1px solid #C5A572;
+        padding: 0.5rem 1rem;
         border-radius: 6px;
-        overflow: hidden;
+        transition: transform 0.3s ease;
     }
 
-    .social-link {
-        display: block;
-        width: 100%;
-        padding: 0.8rem 1.2rem;
-        text-decoration: none;
-        color: #C5A572;
-        transition: all 0.3s ease;
-        border: none;
-        background: transparent;
-        font-size: 1rem;
-    }
-
-    .social-link:hover {
-        background: rgba(197, 165, 114, 0.1);
+    .social-link-container:hover {
         transform: translateY(-2px);
     }
 
-    @media (max-width: 900px) {
-        .project-container {
-            flex-direction: column;
-        }
-        
-        .sidebar {
-            width: 100%;
-            position: static;
-        }
-        
-        .social-links {
-            flex-direction: row;
-            flex-wrap: wrap;
-            justify-content: space-between;
-        }
-        
-        .social-link-container {
-            width: calc(50% - 0.5rem);
-        }
+    .social-link {
+        color: #C5A572;
+        text-decoration: none;
     }
 </style>
 </body>
