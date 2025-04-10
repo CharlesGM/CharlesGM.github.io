@@ -216,26 +216,24 @@ $ cat current_focus.txt
             </section>
         </div>
 
-        <div class="content-right">
-            <section class="connect">
-                <h2>☎️ Connect With Me</h2>
-                <div class="social-links">
-                    <div class="social-link-container">
-                        <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
-                    </div>
-                    <div class="social-link-container">
-                        <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-                    </div>
-                    <div class="social-link-container">
-                        <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">
-                            <svg height="16" viewBox="0 0 16 16" width="16" style="margin-right: 8px">
-                                <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
-                            </svg>
-                            GitHub
-                        </a>
-                    </div>
+        <div class="sidebar">
+            <div class="social-links">
+                <h3>Let's Chat:</h3>
+                <div class="social-link-container">
+                    <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
                 </div>
-            </section>
+                <div class="social-link-container">
+                    <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+                </div>
+                <div class="social-link-container">
+                    <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">
+                        <svg height="16" viewBox="0 0 16 16" width="16" style="margin-right: 8px">
+                            <path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"></path>
+                        </svg>
+                        GitHub
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>
@@ -623,53 +621,78 @@ $ cat current_focus.txt
     /* First, let's add styles for the new layout */
     .main-content {
         display: flex;
-        gap: 2rem;  /* Reduced from 3rem */
+        flex-direction: row-reverse;
+        gap: 2rem;
         align-items: flex-start;
-        justify-content: space-between;  /* Added to push content apart */
+        justify-content: space-between;
     }
 
     .content-left {
         flex: 1;
-        max-width: 1000px;  /* Limit width for better readability */
+        max-width: 1000px;
     }
 
-    .content-right {
-        width: 250px;  /* Reduced from 300px */
+    .sidebar {
+        width: 250px;
         position: sticky;
         top: 3rem;
-        margin-left: 2rem;  /* Add margin to push it right */
+        height: fit-content;
     }
 
-    .github-stats {
-        padding: 1.5rem; /* Reduced padding */
-        margin-bottom: 2rem; /* Reduced margin */
+    .social-links {
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        background: #111111;
+        padding: 1.5rem;
+        border-radius: 12px;
+        border: 1px solid #C5A572;
+        margin-bottom: 2rem;
     }
 
-    .github-stats h2 {
-        font-size: 1.8rem; /* Slightly smaller heading */
-        margin-bottom: 1.5rem; /* Reduced margin */
+    .social-links h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(197, 165, 114, 0.3);
+        padding-bottom: 0.5rem;
     }
 
-    /* Make connect section more compact */
-    .connect {
-        padding: 1.8rem;  /* Reduced padding */
+    .social-link-container {
+        width: 100%;
+        background: transparent;
+        border: 1px solid #C5A572;
+        border-radius: 6px;
+        padding: 0;
+        transition: transform 0.3s ease;
     }
 
-    .project-detail-container {
-        max-width: 1200px; /* Increased from 1000px */
-        margin: 0 auto;
-        padding: 2rem 3rem; /* Adjusted padding for better width usage */
-        background-color: transparent;
+    .social-link {
+        display: block;
+        width: 100%;
+        padding: 0.8rem 1rem;
         color: #C5A572;
+        text-decoration: none;
     }
 
-    .features-grid {
-        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Adjusted minmax for better width usage */
-    }
-
-    @media (max-width: 768px) {
-        .project-detail-container {
-            padding: 1rem 1.5rem; /* Adjusted padding for smaller screens */
+    @media (max-width: 900px) {
+        .main-content {
+            flex-direction: column;
+        }
+        
+        .sidebar {
+            width: 100%;
+            position: static;
+        }
+        
+        .social-links {
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        
+        .social-link-container {
+            width: calc(50% - 0.5rem);
         }
     }
 </style>

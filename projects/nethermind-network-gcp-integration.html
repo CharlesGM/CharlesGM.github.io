@@ -1,21 +1,4 @@
 <div class="project-container">
-    <div class="sidebar">
-        <div class="social-links">
-            <div class="social-link-container">
-                <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
-            </div>
-            <div class="social-link-container">
-                <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
-            </div>
-            <div class="social-link-container">
-                <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
-            </div>
-            <div class="social-link-container">
-                <a href="https://ledgerndary.co/" class="social-link" target="_blank" rel="noopener noreferrer">🌐 Website</a>
-            </div>
-        </div>
-    </div>
-    
     <div class="main-content">
         <div class="project-detail-container">
             <nav class="breadcrumb">
@@ -165,6 +148,24 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
             </section>
         </div>
     </div>
+    
+    <div class="sidebar">
+        <div class="social-links">
+            <h3>Let's Chat:</h3>
+            <div class="social-link-container">
+                <a href="mailto:gachangocmbugua@gmail.com" class="social-link" target="_blank" rel="noopener noreferrer">📧 Email</a>
+            </div>
+            <div class="social-link-container">
+                <a href="https://www.linkedin.com/in/charles-mbugua-b7525ba5/" class="social-link" target="_blank" rel="noopener noreferrer">💼 LinkedIn</a>
+            </div>
+            <div class="social-link-container">
+                <a href="https://github.com/CharlesGM" class="social-link" target="_blank" rel="noopener noreferrer">🐙 GitHub</a>
+            </div>
+            <div class="social-link-container">
+                <a href="https://ledgerndary.co/" class="social-link" target="_blank" rel="noopener noreferrer">🌐 Website</a>
+            </div>
+        </div>
+    </div>
 </div>
 
 <style>
@@ -181,6 +182,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
     .project-container {
         display: flex;
+        flex-direction: row-reverse;
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -191,6 +193,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         width: 250px;
         position: sticky;
         top: 3rem;
+        height: fit-content;
     }
 
     .main-content {
@@ -402,6 +405,14 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         border-radius: 12px;
         border: 1px solid #C5A572;
         margin-bottom: 2rem;
+    }
+
+    .social-links h3 {
+        margin-top: 0;
+        margin-bottom: 1rem;
+        text-align: center;
+        border-bottom: 1px solid rgba(197, 165, 114, 0.3);
+        padding-bottom: 0.5rem;
     }
 
     .social-link-container {
