@@ -189,7 +189,7 @@ terraform apply</code></pre>
 
     .project-container {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -201,10 +201,12 @@ terraform apply</code></pre>
         position: sticky;
         top: 3rem;
         height: fit-content;
+        margin-left: auto;
     }
 
     .main-content {
         flex: 1;
+        max-width: 900px;
     }
 
     .project-detail-container {
@@ -492,6 +494,7 @@ terraform apply</code></pre>
         .sidebar {
             width: 100%;
             position: static;
+            margin-left: 0;
         }
         
         .social-links {

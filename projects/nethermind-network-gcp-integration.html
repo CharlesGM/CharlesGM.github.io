@@ -182,7 +182,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
     .project-container {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 2rem;
         max-width: 1200px;
         margin: 0 auto;
@@ -194,10 +194,12 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         position: sticky;
         top: 3rem;
         height: fit-content;
+        margin-left: auto;
     }
 
     .main-content {
         flex: 1;
+        max-width: 900px;
     }
 
     .project-detail-container {
@@ -440,6 +442,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         .sidebar {
             width: 100%;
             position: static;
+            margin-left: 0;
         }
         
         .social-links {

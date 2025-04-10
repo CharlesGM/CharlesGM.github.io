@@ -621,7 +621,7 @@ $ cat current_focus.txt
     /* First, let's add styles for the new layout */
     .main-content {
         display: flex;
-        flex-direction: row-reverse;
+        flex-direction: row;
         gap: 2rem;
         align-items: flex-start;
         justify-content: space-between;
@@ -637,6 +637,7 @@ $ cat current_focus.txt
         position: sticky;
         top: 3rem;
         height: fit-content;
+        margin-left: auto;
     }
 
     .social-links {
@@ -683,6 +684,7 @@ $ cat current_focus.txt
         .sidebar {
             width: 100%;
             position: static;
+            margin-left: 0;
         }
         
         .social-links {
