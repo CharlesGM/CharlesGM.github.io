@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Nethermind GCP Integration - Charles Mbugua</title>
     <link rel="icon" type="image/x-icon" href="/favicon.ico">
     <!-- Alternative PNG format for modern browsers -->
@@ -196,6 +196,7 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         width: 100%;
         display: flex;
         justify-content: center;
+        overflow-x: hidden;
     }
 
     .project-detail-container {
@@ -204,6 +205,8 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
         padding: 2rem;
         background-color: transparent;
         color: #C5A572;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .breadcrumb {
@@ -350,6 +353,8 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
     code {
         font-family: 'Fira Code', monospace;
+        overflow-wrap: break-word;
+        word-wrap: break-word;
     }
 
     .benefits-list {
@@ -391,6 +396,67 @@ npx hardhat run scripts/deploy.js --network gcp  # In another terminal</code></p
 
         section {
             padding: 1.5rem;
+        }
+        
+        pre {
+            padding: 1rem;
+            font-size: 0.9rem;
+        }
+        
+        pre code {
+            white-space: pre-wrap;
+            word-break: break-word;
+        }
+        
+        h1 {
+            font-size: 1.8rem;
+        }
+        
+        h2 {
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+    }
+    
+    @media (max-width: 480px) {
+        .project-detail-container {
+            padding: 1rem 0.8rem;
+        }
+
+        section {
+            padding: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .feature-card {
+            padding: 1rem;
+        }
+
+        .step {
+            padding: 1rem;
+        }
+
+        pre {
+            padding: 0.8rem;
+            font-size: 0.8rem;
+        }
+
+        .social-links {
+            flex-direction: column;
+            gap: 0.8rem;
+        }
+
+        .social-link-container {
+            width: 100%;
+        }
+        
+        .benefits-list li {
+            padding: 0.6rem 0.8rem;
+        }
+        
+        .tag {
+            padding: 0.2rem 0.5rem;
+            font-size: 0.75rem;
         }
     }
 
